@@ -79,7 +79,7 @@ const PastReadingsGallery: React.FC = () => {
                             className="mt-2 bg-yellow-500 hover:bg-yellow-600 text-white"
                           >
                             {currentlyPlaying === reading.audioIpfsHash ? <Pause className="mr-2" /> : <Play className="mr-2" />}
-                            {currentlyPlaying === reading.audioIpfsHash ? 'Pause' : 'Play'} Reading
+                            리딩 {currentlyPlaying === reading.audioIpfsHash ? '일시정지' : '재생'}
                           </Button>
                         </div>
                       </CardContent>
@@ -88,7 +88,7 @@ const PastReadingsGallery: React.FC = () => {
                 </DialogTrigger>
                 <DialogContent className="max-w-3xl bg-gradient-to-br from-yellow-50 to-orange-50">
                   <DialogHeader>
-                    <DialogTitle className="text-2xl text-orange-800 font-serif">Palm Reading {index + 1}</DialogTitle>
+                    <DialogTitle className="text-2xl text-orange-800 font-serif">손금 리딩 {index + 1}</DialogTitle>
                   </DialogHeader>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <img 
@@ -97,15 +97,15 @@ const PastReadingsGallery: React.FC = () => {
                       className="w-full h-auto object-contain rounded-lg"
                     />
                     <div>
-                      <h3 className="text-lg font-semibold mb-2 text-orange-900 font-serif">Your Reading</h3>
+                      <h3 className="text-lg font-semibold mb-2 text-orange-900 font-serif">리딩 내용</h3>
                       <p className="text-sm mb-2 text-orange-800 font-serif">{reading.reading}</p>
-                      <p className="text-xs text-orange-600 font-serif">Date: {formatDate(reading.timestamp)}</p>
-                      <Button 
-                        onClick={() => toggleAudio(reading.audioIpfsHash)} 
+                      <p className="text-xs text-orange-600 font-serif">날짜: {formatDate(reading.timestamp)}</p>
+                      <Button
+                        onClick={() => toggleAudio(reading.audioIpfsHash)}
                         className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white"
                       >
                         {currentlyPlaying === reading.audioIpfsHash ? <Pause className="mr-2" /> : <Play className="mr-2" />}
-                        {currentlyPlaying === reading.audioIpfsHash ? 'Pause' : 'Play'} Reading
+                        리딩 {currentlyPlaying === reading.audioIpfsHash ? '일시정지' : '재생'}
                       </Button>
                     </div>
                   </div>

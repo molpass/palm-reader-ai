@@ -4,20 +4,20 @@ import { Upload, Sparkles, Clock, ArrowRight } from 'lucide-react';
 const steps = [
   {
     icon: <Upload className="w-6 h-6" />,
-    title: "Upload or Capture",
-    description: "Upload a clear photo of your palm or capture one instantly with your camera.",
+    title: "업로드 또는 촬영",
+    description: "선명한 손바닥 사진을 올리거나 카메라로 바로 촬영하세요.",
     color: "from-violet-500 to-purple-600"
   },
   {
     icon: <Sparkles className="w-6 h-6" />,
-    title: "AI Analysis",
-    description: "Our advanced mystical AI analyzes your palm lines and reveals hidden patterns.",
+    title: "AI 분석",
+    description: "진보된 신비로운 AI가 손금을 분석해 숨겨진 패턴을 드러냅니다.",
     color: "from-emerald-500 to-teal-600"
   },
   {
     icon: <Clock className="w-6 h-6" />,
-    title: "Discover Insights",
-    description: "Receive personalized insights about your personality, future, and life path.",
+    title: "통찰 발견",
+    description: "당신의 성격, 미래, 인생 경로에 대한 맞춤형 통찰을 받아보세요.",
     color: "from-amber-500 to-orange-600"
   },
 ];
@@ -39,10 +39,10 @@ const HowToUse: React.FC = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 bg-clip-text text-transparent mb-4">
-            How It Works
+            이용 방법
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Discover the secrets of your palm in three simple steps
+            세 단계로 간단하게 손바닥의 비밀을 알아보세요
           </p>
         </motion.div>
 
@@ -99,7 +99,7 @@ const HowToUse: React.FC = () => {
         >
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-100 to-indigo-100 rounded-full text-purple-700 font-medium">
             <Sparkles className="w-4 h-4" />
-            <span>Ready to discover your destiny?</span>
+            <span>당신의 운명을 알아볼 준비가 되셨나요?</span>
           </div>
         </motion.div>
       </div>

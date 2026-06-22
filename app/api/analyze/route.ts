@@ -8,7 +8,7 @@ export async function POST(request: NextRequest) {
     const { ipfsHash } = await request.json();
 
     if (!ipfsHash || typeof ipfsHash !== 'string') {
-      return NextResponse.json({ error: 'IPFS hash inválido.' }, { status: 400 });
+      return NextResponse.json({ error: '유효하지 않은 IPFS 해시입니다.' }, { status: 400 });
     }
 
     const prompt = buildPrompt();
@@ -22,21 +22,21 @@ export async function POST(request: NextRequest) {
       max_tokens: 300,
     });
 
-    const message = result.choices?.[0]?.message?.content?.trim() || 'Could not generate a valid response. Please try again.';
-    // console.log('📜 Lectura generada:', message);
+    const message = result.choices?.[0]?.message?.content?.trim() || '유효한 응답을 생성하지 못했습니다. 다시 시도해 주세요.';
+    // console.log('📜 생성된 리딩:', message);
     return NextResponse.json({ reading: message });
   } catch (error) {
-    console.error('❌ Error en chatCompletion:', error);
-    return NextResponse.json({ error: 'Error interno generando lectura.' }, { status: 500 });
+    console.error('❌ chatCompletion 오류:', error);
+    return NextResponse.json({ error: '리딩 생성 중 내부 오류가 발생했습니다.' }, { status: 500 });
   }
 }
 
 function buildPrompt(): string {
-  return `You are a mystical palm reader. Someone has uploaded an image of their palm and seeks insight into their destiny.
+  return `당신은 신비로운 손금술사입니다. 어떤 사람이 자신의 손바닥 이미지를 올리고 운명에 대한 통찰을 구하고 있습니다.
 
-Write a unique and insightful palm reading covering the key aspects of palmistry: love, career, health, and the future. Avoid generic phrases like "everything will be fine" or "you will be successful"—be imaginative and specific.
+손금의 핵심 영역인 사랑, 직업, 건강, 그리고 미래를 아우르는 독창적이고 통찰력 있는 손금 리딩을 한국어로 작성하세요. "다 잘될 거예요"나 "당신은 성공할 거예요" 같은 뻔한 표현은 피하고, 상상력 있고 구체적으로 작성하세요.
 
-Your response must be fully written, without cut-off or incomplete sentences. Use a warm and empathetic tone, and feel free to include emojis to add a magical touch.
+응답은 잘리거나 미완성된 문장 없이 완결되어야 합니다. 따뜻하고 공감 어린 어조를 사용하고, 마법 같은 분위기를 더하기 위해 이모지를 자유롭게 넣어도 좋습니다.
 
-Make sure your response is between 180 and 200 words, and ends with a clear, uplifting conclusion. Each sentence should be meaningful, and the overall reading should feel complete and satisfying.`;
+응답은 한국어 기준 350~450자 정도로 작성하고, 분명하고 희망적인 결론으로 마무리하세요. 모든 문장이 의미를 담아야 하며, 전체 리딩이 완결되고 만족스럽게 느껴져야 합니다.`;
 }

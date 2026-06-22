@@ -18,16 +18,16 @@ import type {
 } from '@mediapipe/tasks-vision';
 
 const loadingMessages = [
-  "Analyzing the lines of destiny...",
-  "Decoding the secrets of your palm...",
-  "Consulting with the digital oracle...",
-  "Unraveling the mysteries of your future...",
-  "Channeling the wisdom of ancient palmists...",
-  "Translating hand-written fate into binary...",
-  "Scanning for signs of upcoming adventures...",
-  "Detecting traces of good fortune...",
-  "Measuring the length of your life line...",
-  "Calculating your luckiness quotient..."
+  "운명의 선을 분석하는 중...",
+  "손바닥에 숨겨진 비밀을 해독하는 중...",
+  "디지털 오라클과 상담하는 중...",
+  "당신의 미래에 담긴 신비를 풀어내는 중...",
+  "옛 손금술사들의 지혜를 끌어오는 중...",
+  "손에 새겨진 운명을 0과 1로 번역하는 중...",
+  "다가올 모험의 징조를 살피는 중...",
+  "행운의 흔적을 감지하는 중...",
+  "생명선의 길이를 재는 중...",
+  "당신의 행운 지수를 계산하는 중..."
 ];
 
 declare global {
@@ -84,7 +84,7 @@ export default function Home() {
       const isValid = await validateHand(imageUrl);
       console.log("🧠 Hand validation result:", isValid);
       if (!isValid) {
-        setError("No se detectó una mano clara en la imagen.");
+        setError("이미지에서 손을 명확하게 인식하지 못했습니다.");
         return;
       }
 
@@ -93,7 +93,7 @@ export default function Home() {
       saveReading(ipfsHash, response.data.reading);
     } catch (error) {
       console.error('❌ Error analyzing palm:', error);
-      setError('An unexpected error occurred while analyzing the image.');
+      setError('이미지를 분석하는 중 예기치 않은 오류가 발생했습니다.');
     } finally {
       setIsLoading(false);
     }
@@ -167,7 +167,7 @@ export default function Home() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-100 to-indigo-100 rounded-full text-purple-700 font-medium mb-8">
             <Sparkles className="w-4 h-4" />
-            <span>Powered by AI & Built for DEV Challenge</span>
+            <span>AI 기반 손금 리딩</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 bg-clip-text text-transparent mb-6">
@@ -175,8 +175,8 @@ export default function Home() {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed">
-            Discover the secrets hidden in your palm with advanced AI technology. 
-            Upload your palm photo and unlock mystical insights about your destiny.
+            진보된 AI 기술로 손바닥에 숨겨진 비밀을 발견하세요.
+            손바닥 사진을 올리면 당신의 운명에 대한 신비로운 통찰을 열어드립니다.
           </p>
         </motion.div>
       </section>
@@ -199,14 +199,14 @@ export default function Home() {
                 className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-500 data-[state=active]:to-indigo-500 data-[state=active]:text-white rounded-xl font-medium transition-all duration-300 flex items-center gap-2"
               >
                 <Eye className="w-4 h-4" />
-                Current Reading
+                현재 리딩
               </TabsTrigger>
               <TabsTrigger 
                 value="past" 
                 className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-500 data-[state=active]:to-indigo-500 data-[state=active]:text-white rounded-xl font-medium transition-all duration-300 flex items-center gap-2"
               >
                 <History className="w-4 h-4" />
-                Past Readings
+                지난 리딩
               </TabsTrigger>
             </TabsList>
             
@@ -218,9 +218,9 @@ export default function Home() {
                     <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
                       <Sparkles className="w-4 h-4" />
                     </div>
-                    New Palm Reading
+                    새 손금 리딩
                   </h2>
-                  <p className="text-purple-100 mt-2">Upload your palm image to discover your destiny</p>
+                  <p className="text-purple-100 mt-2">손바닥 이미지를 올려 당신의 운명을 알아보세요</p>
                 </div>
 
                 {/* Content */}
@@ -239,7 +239,7 @@ export default function Home() {
                         onClick={handleAnalyze}
                       >
                         <Sparkles className="w-5 h-5 mr-2" />
-                        Analyze Palm & Reveal Destiny
+                        손금 분석하고 운명 확인하기
                       </Button>
                     </motion.div>
                   )}
@@ -270,7 +270,7 @@ export default function Home() {
                       </motion.h3>
                       
                       <p className="text-purple-600 text-lg">
-                        Our mystical AI is decoding the secrets of your palm...
+                        신비로운 AI가 당신의 손바닥에 담긴 비밀을 해독하고 있습니다...
                       </p>
                       
                       <div className="mt-6 flex justify-center">
@@ -304,7 +304,7 @@ export default function Home() {
                     >
                       <AlertCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" />
                       <div>
-                        <h4 className="font-semibold text-red-800 mb-1">Analysis Error</h4>
+                        <h4 className="font-semibold text-red-800 mb-1">분석 오류</h4>
                         <p className="text-red-700">{error}</p>
                       </div>
                     </motion.div>

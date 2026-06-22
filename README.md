@@ -66,21 +66,6 @@ Palm Reader AI는 인공지능으로 손금 이미지를 분석해 신비로운 
 
 5. 브라우저에서 [http://localhost:3000](http://localhost:3000) 을 엽니다.
 
-## 🔗 Dev Pinata 챌린지
-
-이 프로젝트는 Pinata의 IPFS 스토리지 솔루션을 혁신적인 애플리케이션에 통합하는 데 초점을 맞춘 Dev Pinata 챌린지의 일환으로 만들어졌습니다. Palm Reader AI는 손금 이미지와 음성 리딩을 탈중앙화 방식으로 저장·조회하는 데 Pinata를 활용하는 사례를 보여줍니다.
-
-## 🤝 기여하기
-
-기여, 이슈, 기능 요청을 환영합니다! 자유롭게 [이슈 페이지](https://github.com/ehernandezvilla/palm-reader-ai/issues)를 확인해 주세요.
-
 ## 📜 라이선스
 
-이 프로젝트는 [MIT](https://choosealicense.com/licenses/mit/) 라이선스를 따릅니다.
-
-## 🙏 감사의 글
-
-- 강력한 AI 모델을 제공해 준 [Hugging Face](https://huggingface.co/)
-- 탈중앙화 스토리지 솔루션을 제공해 준 [Pinata](https://www.pinata.cloud/)
-- 히어로 섹션에 사용된 아름다운 타로 카드 이미지를 제공해 준 [Unsplash](https://unsplash.com/)
-- 이 프로젝트에 사용된 모든 오픈소스 라이브러리와 도구
+[MIT](https://choosealicense.com/licenses/mit/)

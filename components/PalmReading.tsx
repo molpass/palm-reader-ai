@@ -61,8 +61,8 @@ const PalmReading: React.FC<PalmReadingProps> = ({ reading }) => {
               <Eye className="w-5 h-5" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold">Your Mystical Reading</h2>
-              <p className="text-purple-100">Decoded from the lines of your palm</p>
+              <h2 className="text-2xl font-bold">당신의 신비로운 리딩</h2>
+              <p className="text-purple-100">손바닥의 선에서 해독한 결과</p>
             </div>
           </div>
           
@@ -167,7 +167,7 @@ const PalmReading: React.FC<PalmReadingProps> = ({ reading }) => {
           >
             <div className="flex items-center justify-center gap-2 text-purple-600">
               <Sparkles className="w-4 h-4" />
-              <span className="text-sm font-medium">Powered by Mystical AI</span>
+              <span className="text-sm font-medium">신비로운 AI 제공</span>
               <Sparkles className="w-4 h-4" />
             </div>
           </motion.div>
@@ -184,7 +184,7 @@ const PalmReading: React.FC<PalmReadingProps> = ({ reading }) => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium">
             <Check className="w-4 h-4" />
-            Reading copied to clipboard!
+            리딩이 클립보드에 복사되었습니다!
           </div>
         </motion.div>
       )}

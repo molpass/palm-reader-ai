@@ -81,11 +81,11 @@ const FileUpload: React.FC<FileUploadProps> = ({ onUploadComplete }) => {
             accept="image/*"
           />
           <Button onClick={handleButtonClick} disabled={isUploading} className="mb-2">
-            {isUploading ? 'Uploading...' : 'Upload Image'}
+            {isUploading ? '업로드 중...' : '이미지 업로드'}
             <Upload className="ml-2 h-4 w-4" />
           </Button>
           <Button onClick={() => setIsWebcamOpen(true)} disabled={isUploading}>
-            Take Picture
+            사진 촬영
             <Camera className="ml-2 h-4 w-4" />
           </Button>
         </motion.div>
@@ -98,8 +98,8 @@ const FileUpload: React.FC<FileUploadProps> = ({ onUploadComplete }) => {
             className="mb-4 rounded-lg"
           />
           <div className="flex space-x-2">
-            <Button onClick={handleWebcamCapture}>Capture</Button>
-            <Button onClick={() => setIsWebcamOpen(false)} variant="outline">Cancel</Button>
+            <Button onClick={handleWebcamCapture}>촬영</Button>
+            <Button onClick={() => setIsWebcamOpen(false)} variant="outline">취소</Button>
           </div>
         </div>
       )}

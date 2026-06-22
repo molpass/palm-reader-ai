@@ -2,9 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, Menu, X, Eye, History, Info, Github, ExternalLink } from 'lucide-react';
-import Link from 'next/link';
-import { Button } from "@/components/ui/button";
+import { Sparkles, Menu, X, Eye, History, Info } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,22 +19,22 @@ const Navbar: React.FC = () => {
 
   const navigationItems = [
     {
-      name: 'New Reading',
+      name: '새 리딩',
       href: '#current',
       icon: <Eye className="w-4 h-4" />,
-      description: 'Start a new palm analysis'
+      description: '새 손금 분석 시작'
     },
     {
-      name: 'Past Readings',
+      name: '지난 리딩',
       href: '#past',
       icon: <History className="w-4 h-4" />,
-      description: 'View your reading history'
+      description: '리딩 기록 보기'
     },
     {
-      name: 'How It Works',
+      name: '이용 방법',
       href: '#how-to-use',
       icon: <Info className="w-4 h-4" />,
-      description: 'Learn about the process'
+      description: '진행 과정 알아보기'
     },
   ];
 
@@ -78,7 +76,7 @@ const Navbar: React.FC = () => {
                 <h1 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
                   Palm Reader AI
                 </h1>
-                <p className="text-xs text-gray-500 -mt-1">Powered by AI</p>
+                <p className="text-xs text-gray-500 -mt-1">AI 기반</p>
               </div>
             </motion.div>
 
@@ -110,32 +108,6 @@ const Navbar: React.FC = () => {
                   </div>
                 </motion.button>
               ))}
-            </div>
-
-            {/* Desktop CTA & External Links */}
-            <div className="hidden lg:flex items-center gap-3">
-              <Link
-                href="https://github.com/ehernandezvilla"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 text-gray-600 hover:text-purple-600 transition-colors duration-200 rounded-lg hover:bg-purple-50"
-              >
-                <Github className="w-5 h-5" />
-              </Link>
-              
-              <Link
-                href="https://ehernandezvilla.github.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  size="sm"
-                  className="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  About Me
-                </Button>
-              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -179,32 +151,6 @@ const Navbar: React.FC = () => {
                     </div>
                   </motion.button>
                 ))}
-                
-                {/* Mobile External Links */}
-                <div className="pt-4 border-t border-purple-200/50 space-y-3">
-                  <Link
-                    href="https://github.com/ehernandezvilla"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-3 rounded-xl text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-colors duration-200"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    <Github className="w-5 h-5" />
-                    <span className="font-medium">GitHub</span>
-                  </Link>
-                  
-                  <Link
-                    href="https://ehernandezvilla.github.io/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    <Button className="w-full bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white rounded-xl font-medium">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      About Me
-                    </Button>
-                  </Link>
-                </div>
               </div>
             </motion.div>
           )}

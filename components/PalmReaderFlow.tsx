@@ -73,23 +73,23 @@ export default function PalmReaderFlow() {
             className="w-full max-h-96 object-contain border rounded mt-2"
           />
           <button onClick={validateHand} className="bg-yellow-500 text-white px-4 py-2 mt-4 rounded">
-            Validar mano
+            손 인식 확인
           </button>
         </div>
       )}
       {handDetected === true && (
         <div className="text-green-600 mt-2">
-          ✅ Mano detectada.
+          ✅ 손이 인식되었습니다.
           <button onClick={sendToLLM} className="bg-orange-600 text-white px-4 py-2 ml-4 rounded">
-            Enviar a LLM
+            LLM으로 보내기
           </button>
         </div>
       )}
-      {handDetected === false && <div className="text-red-600 mt-2">❌ No se detectó una mano clara</div>}
-      {isLoading && <p className="text-gray-600">Procesando...</p>}
+      {handDetected === false && <div className="text-red-600 mt-2">❌ 손을 명확하게 인식하지 못했습니다</div>}
+      {isLoading && <p className="text-gray-600">처리 중...</p>}
       {reading && (
         <div className="bg-orange-100 border border-orange-300 p-4 rounded mt-4">
-          <h3 className="text-orange-800 font-bold mb-2">🔮 Lectura:</h3>
+          <h3 className="text-orange-800 font-bold mb-2">🔮 리딩:</h3>
           <p>{reading}</p>
         </div>
       )}
