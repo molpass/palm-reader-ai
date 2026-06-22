@@ -1,84 +1,86 @@
 # Palm Reader AI 🔮🖐️
 
+> 🇰🇷 이 저장소는 **molpass가 포크한 사본**입니다. 영어 원문은 [README.en.md](./README.en.md)를 참고하세요.
+
 ![Tarot img](https://images.unsplash.com/photo-1600430073932-e915854d9d4d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D "Palm Reader AI")
-[Image: Unsplash - Viva Luna Studios](https://unsplash.com/@vivalunastudios)
+[이미지: Unsplash - Viva Luna Studios](https://unsplash.com/@vivalunastudios)
 
-Palm Reader AI is an innovative (but mostly fun) web application that uses artificial intelligence to analyze palm images and provide mystical readings. This project was developed as part of the Dev Pinata challenge, showcasing the integration of AI technologies with decentralized storage solutions.
+Palm Reader AI는 인공지능으로 손금 이미지를 분석해 신비로운 리딩을 제공하는 혁신적인(하지만 대부분은 재미를 위한) 웹 애플리케이션입니다. 이 프로젝트는 Dev Pinata 챌린지의 일환으로 개발되었으며, AI 기술과 탈중앙화 스토리지 솔루션의 결합을 보여줍니다.
 
-## 🌟 Features
+## 🌟 주요 기능
 
-- Upload palm images for AI analysis
-- Receive personalized palm readings
-- Text-to-speech functionality for audio readings
-- Gallery of past readings
-- Responsive and mystical UI design
+- 손금 이미지 업로드 및 AI 분석
+- 개인 맞춤형 손금 리딩 제공
+- 음성 리딩을 위한 TTS(텍스트 음성 변환) 기능
+- 지난 리딩 기록 갤러리
+- 반응형의 신비로운 UI 디자인
 
-## 🚀 Tech Stack
+## 🚀 기술 스택
 
-- **Frontend**: Next.js with React
-- **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **API Requests**: Axios
-- **Text-to-Speech**: Hugging Face Inference API
-- **Decentralized Storage**: Pinata IPFS
+- **프론트엔드**: Next.js with React
+- **스타일링**: Tailwind CSS
+- **UI 컴포넌트**: shadcn/ui
+- **애니메이션**: Framer Motion
+- **아이콘**: Lucide React
+- **API 요청**: Axios
+- **TTS(음성 변환)**: Hugging Face Inference API
+- **탈중앙화 스토리지**: Pinata IPFS
 
-## 🧠 AI Models
+## 🧠 AI 모델
 
-- **Palm Analysis**: facebook/detr-resnet-50 (Object Detection)
-- **Text Generation**: meta-llama/Llama-2-7b-chat-hf
-- **Text-to-Speech**: espnet/kan-bayashi_ljspeech_vits
+- **손금 분석**: facebook/detr-resnet-50 (객체 탐지)
+- **텍스트 생성**: meta-llama/Llama-2-7b-chat-hf
+- **음성 변환(TTS)**: espnet/kan-bayashi_ljspeech_vits
 
-## 🏗️ Project Structure
+## 🏗️ 프로젝트 구조
 
-- `components/`: React components (Hero, FileUpload, PalmReading, etc.)
-- `pages/`: Next.js pages and API routes
-- `lib/`: Utility functions and AI model interactions
-- `public/`: Static assets
+- `components/`: React 컴포넌트 (Hero, FileUpload, PalmReading 등)
+- `pages/`: Next.js 페이지 및 API 라우트
+- `lib/`: 유틸리티 함수 및 AI 모델 연동
+- `public/`: 정적 자산(static assets)
 
-## 🚀 Getting Started
+## 🚀 시작하기
 
-1. Clone the repository:
+1. 저장소를 클론합니다:
    ```
    git clone https://github.com/ehernandezvilla/palm-reader-ai
    ```
 
-2. Install dependencies:
+2. 의존성을 설치합니다:
    ```
    npm install
    ```
 
-3. Set up environment variables:
-   Create a `.env.local` file with the following:
+3. 환경 변수를 설정합니다:
+   다음 내용으로 `.env.local` 파일을 생성합니다:
    ```
    HUGGINGFACE_API_KEY=your_huggingface_api_key
    PINATA_API_KEY=your_pinata_api_key
    PINATA_SECRET_API_KEY=your_pinata_secret_key
    ```
 
-4. Run the development server:
+4. 개발 서버를 실행합니다:
    ```
    npm run dev
    ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+5. 브라우저에서 [http://localhost:3000](http://localhost:3000) 을 엽니다.
 
-## 🔗 Dev Pinata Challenge
+## 🔗 Dev Pinata 챌린지
 
-This project was created as part of the Dev Pinata challenge, which focuses on integrating Pinata's IPFS storage solutions into innovative applications. Palm Reader AI demonstrates the use of Pinata for storing and retrieving palm images and audio readings in a decentralized manner.
+이 프로젝트는 Pinata의 IPFS 스토리지 솔루션을 혁신적인 애플리케이션에 통합하는 데 초점을 맞춘 Dev Pinata 챌린지의 일환으로 만들어졌습니다. Palm Reader AI는 손금 이미지와 음성 리딩을 탈중앙화 방식으로 저장·조회하는 데 Pinata를 활용하는 사례를 보여줍니다.
 
-## 🤝 Contributing
+## 🤝 기여하기
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/ehernandezvilla/palm-reader-ai/issues).
+기여, 이슈, 기능 요청을 환영합니다! 자유롭게 [이슈 페이지](https://github.com/ehernandezvilla/palm-reader-ai/issues)를 확인해 주세요.
 
-## 📜 License
+## 📜 라이선스
 
-This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
+이 프로젝트는 [MIT](https://choosealicense.com/licenses/mit/) 라이선스를 따릅니다.
 
-## 🙏 Acknowledgements
+## 🙏 감사의 글
 
-- [Hugging Face](https://huggingface.co/) for providing powerful AI models
-- [Pinata](https://www.pinata.cloud/) for decentralized storage solutions
-- [Unsplash](https://unsplash.com/) for the beautiful tarot card image used in the hero section
-- All open-source libraries and tools used in this project
+- 강력한 AI 모델을 제공해 준 [Hugging Face](https://huggingface.co/)
+- 탈중앙화 스토리지 솔루션을 제공해 준 [Pinata](https://www.pinata.cloud/)
+- 히어로 섹션에 사용된 아름다운 타로 카드 이미지를 제공해 준 [Unsplash](https://unsplash.com/)
+- 이 프로젝트에 사용된 모든 오픈소스 라이브러리와 도구
